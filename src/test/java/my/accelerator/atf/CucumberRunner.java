@@ -18,10 +18,12 @@ import static io.cucumber.core.options.Constants.PLUGIN_PUBLISH_QUIET_PROPERTY_N
 @ConfigurationParameter(key = PLUGIN_PUBLISH_ENABLED_PROPERTY_NAME, value = "false")
 @ConfigurationParameter(
         key = PLUGIN_PROPERTY_NAME,
-        value = "pretty, " +
-                "html:target/cucumber-reports/Cucumber.html, " +
-                "json:target/cucumber-reports/Cucumber.json, " +
-                "junit:target/cucumber-reports/Cucumber.xml"
+        value = "pretty," +
+                "html:target/cucumber-reports/Cucumber.html," +
+                "json:target/cucumber-reports/Cucumber.json," +
+                "junit:target/cucumber-reports/Cucumber.xml," +
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 )
 public class CucumberRunner {
+
 }
