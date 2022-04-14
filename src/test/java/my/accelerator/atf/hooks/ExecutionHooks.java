@@ -1,5 +1,7 @@
 package my.accelerator.atf.hooks;
 
+import com.github.automatedowl.tools.AllureEnvironmentWriter;
+import com.google.common.collect.ImmutableMap;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.AfterStep;
@@ -17,6 +19,12 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 public class ExecutionHooks {
     @BeforeAll
     public static void beforeAll() {
+        AllureEnvironmentWriter.allureEnvironmentWriter(
+                ImmutableMap.<String, String>builder()
+                        .put("Browser", "Chrome")
+                        .put("Browser.Version", "70.0.3538.77")
+                        .build());
+
         System.out.println("-> before all");
     }
 
