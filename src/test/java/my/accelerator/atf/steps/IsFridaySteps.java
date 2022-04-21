@@ -3,7 +3,6 @@ package my.accelerator.atf.steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
 
 public class IsFridaySteps {
     @Given("Given today is Sunday")

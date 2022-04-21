@@ -12,7 +12,7 @@ public class ScenarioContext {
      * @param value - value of the Data entry
      */
     public synchronized void put(ScenarioKeys key, Object value) {
-        if (key != null && value != null)  {
+        if (key != null && value != null) {
             DATA_STORE.get().put(key, value);
         }
     }
@@ -31,6 +31,7 @@ public class ScenarioContext {
 
     /**
      * Returns a {@link Set} view of the keys in datastore.
+     *
      * @return A set of keys stored in datastore
      */
     public synchronized Set<Object> items() {

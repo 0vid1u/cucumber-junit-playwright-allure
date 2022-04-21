@@ -9,28 +9,33 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.spring.CucumberContextConfiguration;
+import io.qameta.allure.Allure;
 import my.accelerator.atf.config.TestConfig;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
 @CucumberContextConfiguration
-@ContextConfiguration(classes = {TestConfig.class},
-        loader = AnnotationConfigContextLoader.class)
+@ContextConfiguration(classes = {TestConfig.class}, loader = AnnotationConfigContextLoader.class)
 public class ExecutionHooks {
     @BeforeAll
     public static void beforeAll() {
         AllureEnvironmentWriter.allureEnvironmentWriter(
                 ImmutableMap.<String, String>builder()
                         .put("Browser", "Chrome")
-                        .put("Browser.Version", "70.0.3538.77")
                         .build());
 
         System.out.println("-> before all");
     }
 
+    @AfterAll
+    public static void afterAll() {
+        System.out.println("-> after all");
+    }
+
     @Before
     public void beforeEach() {
         System.out.println("--> before each");
+        Allure.addAttachment("att.txt", "salut");
     }
 
     @BeforeStep
@@ -46,10 +51,5 @@ public class ExecutionHooks {
     @After
     public void afterEach() {
         System.out.println("--> after each");
-    }
-
-    @AfterAll
-    public static void afterAll() {
-        System.out.println("-> after all");
     }
 }

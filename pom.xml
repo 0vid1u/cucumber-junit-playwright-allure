@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>my.accelerator</groupId>
-	<artifactId>cucumber-playwright-junit</artifactId>
+	<artifactId>cucumber-junit-playwright-allure</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>Accelerator project template based on Playwright, Junit and Cucumber</name>
@@ -104,6 +104,15 @@
 					<includes>
 						<include>**/CucumberRunner*.java</include>
 					</includes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -7,6 +7,6 @@ public class IsWednesdaySteps {
     @When("I ask whether it's Wednesday yet")
     public void i_ask_whether_it_s_wednesday_yet() {
         System.out.println("When I ask whether it's Wednesday yet");
-        Assertions.assertEquals("Yes", "Yes");
+        Assertions.assertEquals("Nope", "Yes");
     }
 }

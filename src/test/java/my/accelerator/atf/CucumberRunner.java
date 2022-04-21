@@ -16,10 +16,7 @@ import static io.cucumber.core.options.Constants.PLUGIN_PUBLISH_QUIET_PROPERTY_N
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "my.accelerator.atf")
 @ConfigurationParameter(key = PLUGIN_PUBLISH_QUIET_PROPERTY_NAME, value = "true")
 @ConfigurationParameter(key = PLUGIN_PUBLISH_ENABLED_PROPERTY_NAME, value = "false")
-@ConfigurationParameter(
-        key = PLUGIN_PROPERTY_NAME,
-        value = "pretty, io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
-)
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm")
 public class CucumberRunner {
 
 }
