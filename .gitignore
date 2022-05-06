@@ -1,5 +1,7 @@
+### Project ###
 target/
-allure-report/
+reports/
+.allure/
 
 ### STS ###
 .apt_generated
