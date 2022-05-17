@@ -1,6 +1,6 @@
 ### Project ###
-target/
-reports/
+allure-results/
+report/
 .allure/
 
 ### STS ###
@@ -20,3 +20,7 @@ reports/
 
 ### VS Code ###
 .vscode/
+
+### Maven ###
+target/
+out/

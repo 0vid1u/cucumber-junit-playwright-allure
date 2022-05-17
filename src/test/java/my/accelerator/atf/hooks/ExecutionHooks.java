@@ -22,7 +22,7 @@ public class ExecutionHooks {
         AllureEnvironmentWriter.allureEnvironmentWriter(
                 ImmutableMap.<String, String>builder()
                         .put("Browser", "Chrome")
-                        .build());
+                        .build(), System.getProperty("user.dir") + "/allure-results/");
 
         System.out.println("-> before all");
     }

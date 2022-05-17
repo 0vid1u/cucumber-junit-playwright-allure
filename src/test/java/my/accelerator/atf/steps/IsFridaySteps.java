@@ -18,5 +18,6 @@ public class IsFridaySteps {
     @Then("I should be told {string}")
     public void i_should_be_told(String string) {
         System.out.println("Then I should be told " + string);
+        throw new IndexOutOfBoundsException("ha ha");
     }
 }

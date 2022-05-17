@@ -17,7 +17,7 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<junit.version>5.8.2</junit.version>
-		<playwright.version>1.21.0</playwright.version>
+		<playwright.version>1.22.0</playwright.version>
 		<cucumber.version>7.2.3</cucumber.version>
 		<allure.cucumber.jvm.version>2.17.3</allure.cucumber.jvm.version>
 		<spring.boot.version>2.6.7</spring.boot.version>
@@ -99,7 +99,7 @@
 	</dependencies>
 
 	<build>
-		<defaultGoal>clean install allure:serve</defaultGoal>
+		<defaultGoal>clean test allure:report</defaultGoal>
 		<testResources>
 			<testResource>
 				<directory>src/test/resources</directory>
@@ -116,6 +116,9 @@
 						<include>**/CucumberRunner*.java</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore>
+					<systemPropertyVariables>
+						<allure.results.directory>${project.basedir}/allure-results</allure.results.directory>
+					</systemPropertyVariables>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -125,6 +128,8 @@
 				<configuration>
 					<reportVersion>${allure.version}</reportVersion>
 					<propertiesFilePath>src/test/resources/allure.properties</propertiesFilePath>
+					<resultsDirectory>${project.basedir}/allure-results</resultsDirectory>
+					<reportDirectory>${project.basedir}/report</reportDirectory>
 				</configuration>
 			</plugin>
 			<plugin>
