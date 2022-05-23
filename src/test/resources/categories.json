@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Problems with locators",
+    "traceRegex": ".*OpenQA.Selenium.NoSuchElementException.*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Skipped Tests",
+    "messageRegex": ".*",
+    "matchedStatuses": [ "skipped" ]
+  },
+  {
+    "name": "Element not found",
+    "messageRegex": ".*No such element exists.*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Broken Tests",
+    "traceRegex": "Error.*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Failed Tests",
+    "traceRegex": ".*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Test Defect",
+    "messageRegex": ".*Expected is not a String or a RegExp.*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Failed Test",
+    "traceRegex": ".*Failed expectation.*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Wait For Element",
+    "traceRegex": ".*WaitForElementToExist.*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Problems with timeout",
+    "messageRegex": ".*Timed out.*",
+    "traceRegex": ".*ThrowTimeoutException.*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Exception Message",
+    "traceRegex": ".*Unable to find element using locator.*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Passed Tests",
+    "matchedStatuses": [ "passed" ]
+  },
+  {
+    "name": "Product defects",
+    "matchedStatuses": [ "failed" ]
+  }
+]
